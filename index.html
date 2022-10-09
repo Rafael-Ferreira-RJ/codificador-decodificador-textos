@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>Codificador e Decodificador de Textos</title>
+    <!--Imagem ao lado esquerdo do título da página, na aba do navegador-->
+    <link rel="shortcut icon" href="Imagens/icone-titulo-pagina.png">
+</head>
+
+<body>
+    <div><img src="Imagens/base64.png" alt="Base 64" class="imagem-base64"></div>
+
+    <div><img src="Imagens/cifra-de-cesar.png" alt="Cifra de César" class="imagem-cifra-de-cesar"></div>
+
+    <h1>Codificador e Decodificador de Textos</h1>
+    
+    <!--Label é a etiqueta da área de texto abaixo.-->
+    <!--O "for" faz com que o lable seja do "textarea" devido ao "id", quando se clica na frase da lable, seleciona o "textarea" automaticamente-->
+    <!--Cols = quantidade de colunas permitida na caixa de texto.-->
+    <!--Cols = quantidade de linhas permitida na caixa de texto.-->
+    <label for="areadetexto01">Digite sua mensagem abaixo, para que ela possa ser codificada ou decodificada, de acordo com a opção escolhida ;)</label>
+    <textarea cols="50" rows="5" name="areadetexto01" id="areadetexto01" placeholder="Digite o texto desejado"></textarea>
+
+    <label for="opcoes">Selecione abaixo o método desejado, e logo em seguida escolha a opção de codificar ou decodificar a sua mensagem ;)</label><br>
+    <select name="opcoes" id="opcoes">
+        <!--Disabled selected utilizado para desabilitar a opção "selecione"-->
+        <option value="semselecao" disabled selected>Selecione</option>
+        <option value="cc" id="cifradecesar">Cifra de César</option>
+        <option value="b64" id="base64">Base64</option>
+    </select><br>
+
+    <div id="opcaocifradecesar">
+        <p>Informe quantas posições deseja incrementar para a opção escolhida acima <br>Insira o número da posição</p>
+        <input id="posicoes" type= "number" class="posicoes" min=1 max=26  placeholder="escolha entre 1 e 25">
+    </div>
+
+    <div class="buttons-selecao">
+        <input type="radio" name="radio-buttons" class ="radio-input" id="codificar" value="codificar">
+        <!--O "for" faz com que o lable seja do "input" devido ao "id", quando se clica na frase da lable, seleciona o "input" automaticamente-->
+        <label for="codificar">Codificar</label>
+
+        <input type="radio" name ="radio-buttons" class ="radio-input" id="decodificar" value="decodificar">
+        <!--O "for" faz com que o lable seja do "input" devido ao "id", quando se clica na frase da lable, seleciona o "input" automaticamente-->
+        <label for="decodificar">Decodificar</label>
+    </div><br>
+
+    <div class="botao-enviar">
+        <input type="submit" id="enviar" value="Codificar Mensagem!" class="botao-display01">
+        <input type="submit" id="enviar" value="Decodificar Mensagem!" class="botao-display02">
+    </div><br>
+
+    <label for="areadetexto02"> </label>
+    <textarea cols="50" rows="5" name="areadetexto02" id="areadetexto02" placeholder="Aqui aparecerá o resultado da sua codificação ou decodificação. OBS: Para decodificar sua mensagem copie e cole o texto exibido neste campo, para o campo acima de digitação do *texto desejado*."></textarea>
+    
+    <!--Rodapé do site-->
+    <footer class="rodape">
+        <p class="rodape-paragrafo">developed by: Rafael Ferreira - 2022&copy;</p>
+    </footer>
+
+    <script type="text/javascript" src="JS/main.js"></script>
+
+</body>
+
+</html>
